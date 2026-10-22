@@ -1,0 +1,27 @@
+<button class="askfab" id="askfab" type="button" aria-haspopup="dialog"><i>?</i><span>작가에게 묻기</span></button>
+<aside class="qa" id="qa" role="dialog" aria-labelledby="qa-t" aria-hidden="true">
+  <header>
+    <div class="tt"><h2 id="qa-t">작가에게 묻기</h2><p id="qa-note">책 내용을 근거로 하라리의 말투로 답하는 AI입니다. 저자 본인의 발언이 아닙니다.</p></div>
+    <button class="gear" id="qgear" type="button" aria-expanded="false" aria-controls="qset">설정</button>
+    <button class="x" id="qx" type="button" aria-label="닫기">✕</button>
+  </header>
+  <div class="qset" id="qset" hidden>
+    <div class="qs-steps"><span class="st" id="st1"><i>1</i>API 키</span><span class="st" id="st2"><i>2</i>책 txt</span><span class="st last"><i>3</i>질문</span></div>
+    <div class="qs-row" id="qs-key">
+      <label for="qkey">Anthropic API 키</label>
+      <div class="qs-in"><input id="qkey" type="password" autocomplete="off" spellcheck="false" placeholder="sk-ant-..."><button id="qkeysave" type="button">저장</button><button id="qkeydel" type="button" class="ghost">삭제</button></div>
+      <p>키는 이 브라우저에만 저장되고, 질문할 때 api.anthropic.com으로만 전송됩니다. 질문마다 내 계정에 사용 요금이 발생하니 공용 컴퓨터에서는 쓴 뒤 삭제하세요. 발급: <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">console.anthropic.com</a></p>
+    </div>
+    <div class="qs-row">
+      <label for="qfile">책 원문 txt</label>
+      <label class="drop" id="qdrop" for="qfile"><b>여기에 『Nexus』 영문 txt를 끌어다 놓기</b><span>또는 눌러서 파일 선택 · 건너뛰면 챕터 요약으로 답합니다</span></label>
+      <input id="qfile" type="file" accept=".txt,text/plain" hidden>
+      <div class="qs-in"><p id="qsrc" style="flex:1"></p><button id="qfiledel" type="button" class="ghost">제거</button></div>
+      <p>파일은 업로드되지 않고 이 브라우저에만 저장되며, 질문과 관련된 몇 구절만 답변 생성에 전송됩니다.</p>
+    </div>
+  </div>
+  <div class="qdragmsg" id="qdragmsg" hidden>txt 파일을 놓으면 책 원문으로 불러옵니다</div>
+  <div class="qlog" id="qlog" aria-live="polite"></div>
+  <form class="qform" id="qform"><textarea id="qin" rows="1" placeholder="이 책에 대해 궁금한 점을 물어보세요" aria-label="질문"></textarea><button id="qsend" type="submit">보내기</button></form>
+</aside>
+

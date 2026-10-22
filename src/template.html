@@ -214,6 +214,7 @@ p{margin:0}
 .cases{margin:0;padding:0 0 0 20px;display:flex;flex-direction:column;gap:12px;font-size:16px;line-height:1.75}
 .cases li::marker{color:var(--pc)}
 
+/*QA_CSS*/
 @media (max-width:900px){
   .views,.parts{grid-template-columns:minmax(0,1fr)}
   .vpanel{grid-template-columns:minmax(0,1fr);padding:22px 18px;gap:22px}
@@ -287,6 +288,7 @@ p{margin:0}
 
 <footer class="foot"><div class="in">Yuval Noah Harari, <i>Nexus: A Brief History of Information Networks from the Stone Age to AI</i> (Random House, 2024) 전문을 읽고 정리한 요약입니다. 영어 인용은 원문 그대로이고 한국어는 번역입니다.</div></footer>
 
+<!--QA_HTML-->
 <div class="sheet" id="sheet" hidden>
   <div class="scrim" id="scrim"></div>
   <section class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="sh-title"></section>
@@ -479,6 +481,7 @@ document.addEventListener('keydown',function(e){
  else if(e.key==='Tab'){var f=[].slice.call(panel.querySelectorAll('button:not(:disabled)')).filter(function(b){return b.offsetParent&&b.style.visibility!=='hidden'});if(!f.length)return;
   var a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}});
 
+/*QA_JS*/
 /* ===== three.js journey ===== */
 var GL=null;
 (function(){
